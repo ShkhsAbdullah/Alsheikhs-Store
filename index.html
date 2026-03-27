@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alsheikhs Store | Ultimate Tech Shop</title>
+    <title>Alsheikhs Store | Premium Electronics</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -14,115 +14,144 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#flash-sale">Flash Sale</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="tel:03080136046"><i class="fas fa-phone"></i> 03080136046</a></li>
+                <li><a href="#flash-sale">Sales</a></li>
+                <li><a href="#products">All Products</a></li>
+                <li><a href="tel:03080136046"><i class="fas fa-headset"></i> Support: 03080136046</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Premium Digital Experience</h1>
-            <p>From iPhone 17 to RTX 4090 - We Have Everything.</p>
-            <a href="#products" class="buy-btn" style="text-decoration:none; display:inline-block; width:auto; padding:15px 40px;">Shop Now</a>
-        </div>
-    </section>
-
-    <section id="flash-sale" class="products" style="background: #fff1f2;">
-        <h2 class="section-title"><i class="fas fa-bolt" style="color:#ef4444;"></i> Flash Sale - 20% OFF</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="badge-sale">20% OFF</div>
-                <img src="https://images.unsplash.com/photo-1695048133142-1a20484d256e?q=80&w=600" alt="iPhone 17">
-                <h3>iPhone 17 Pro Max</h3>
-                <p class="price"><span class="old-price">Rs. 625,000</span> Rs. 500,000</p>
-                <button class="buy-btn" onclick="openOrder('iPhone 17 Pro Max', '500,000')">Order Now</button>
+    <section id="flash-sale" class="products" style="background: #fff5f5; padding-top: 40px;">
+        <h2 class="section-title">🔥 Flash Sale - 20% OFF</h2>
+        <div class="product-grid" id="sale-grid">
             </div>
-            <div class="product-card">
-                <div class="badge-sale">20% OFF</div>
-                <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=600" alt="S24 Ultra">
-                <h3>Samsung S24 Ultra</h3>
-                <p class="price"><span class="old-price">Rs. 525,000</span> Rs. 420,000</p>
-                <button class="buy-btn" onclick="openOrder('Samsung S24 Ultra', '420,000')">Order Now</button>
-            </div>
-        </div>
     </section>
 
     <section id="products" class="products">
-        <h2 class="section-title">All Products</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1517336712461-481a07dfdf24?q=80&w=600" alt="MacBook">
-                <h3>MacBook Pro M3 Max</h3>
-                <p class="price">Rs. 850,000</p>
-                <button class="buy-btn" onclick="openOrder('MacBook Pro M3 Max', '850,000')">Order Now</button>
+        <h2 class="section-title">Latest Digital Inventory</h2>
+        <div class="product-grid" id="main-grid">
             </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=600" alt="PS5">
-                <h3>PlayStation 5 Slim</h3>
-                <p class="price">Rs. 165,000</p>
-                <button class="buy-btn" onclick="openOrder('PlayStation 5 Slim', '165,000')">Order Now</button>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1588423770574-910ae26c8595?q=80&w=600" alt="AirPods">
-                <h3>AirPods Pro (2nd Gen)</h3>
-                <p class="price">Rs. 65,000</p>
-                <button class="buy-btn" onclick="openOrder('AirPods Pro', '65,000')">Order Now</button>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=600" alt="iPad">
-                <h3>iPad Pro M2 12.9"</h3>
-                <p class="price">Rs. 310,000</p>
-                <button class="buy-btn" onclick="openOrder('iPad Pro M2', '310,000')">Order Now</button>
-            </div>
-        </div>
     </section>
 
     <div id="orderModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeOrder()">&times;</span>
-            <h2>Complete Your Order</h2>
-            <p id="selectedProduct" style="font-weight:bold; color:#2563eb; margin-bottom:20px;"></p>
-            <form id="whatsappForm">
-                <input type="text" id="custName" placeholder="Full Name" required>
-                <input type="tel" id="custPhone" placeholder="Phone Number (WhatsApp)" required>
-                <textarea id="custAddress" placeholder="Delivery Address" required></textarea>
-                <button type="submit" class="buy-btn">Confirm Order via WhatsApp</button>
+            <h2 id="modalTitle" style="margin-bottom:10px;">Product Name</h2>
+            <div id="productPreview" style="margin-bottom: 15px;"></div>
+            
+            <form id="checkoutForm">
+                <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                    <div style="flex:1;">
+                        <label>Color:</label>
+                        <select id="pColor"><option>Natural Titanium</option><option>Deep Blue</option><option>Space Gray</option><option>Silver</option></select>
+                    </div>
+                    <div style="flex:1;">
+                        <label>Storage/Size:</label>
+                        <select id="pSize"><option>128GB</option><option>256GB</option><option>512GB</option><option>1TB</option></select>
+                    </div>
+                </div>
+                
+                <input type="text" id="custName" placeholder="Your Full Name" required>
+                <input type="tel" id="custPhone" placeholder="Mobile Number" required>
+                <textarea id="custAddress" placeholder="Delivery Address" required style="height: 80px;"></textarea>
+                
+                <div class="payment-group" style="margin-bottom: 20px;">
+                    <label>Payment Method:</label>
+                    <select id="pMethod">
+                        <option value="cod">Cash on Delivery (COD)</option>
+                        <option value="bank">Bank Transfer / JazzCash</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="buy-btn">Confirm Order</button>
             </form>
         </div>
     </div>
 
+    <div id="successBox" class="modal" style="display:none;">
+        <div class="modal-content" style="text-align:center; padding: 50px;">
+            <i class="fas fa-check-circle" style="font-size: 70px; color: #22c55e; margin-bottom: 20px;"></i>
+            <h2>Order Placed!</h2>
+            <p>Your order has been confirmed. For any queries, call us at 03080136046.</p>
+            <button class="buy-btn" onclick="location.reload()" style="margin-top:20px;">Close</button>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2026 Alsheikhs Store | Contact: 03080136046</p>
+        <p>&copy; 2026 Alsheikhs Store | For Support: 03080136046</p>
     </footer>
 
     <script>
-        let currentProduct = "";
-        let currentPrice = "";
+        // List of 30 Products
+        const products = [
+            { name: "iPhone 17 Pro Max", price: "500,000", old: "625,000", img: "https://images.unsplash.com/photo-1695048133142-1a20484d256e", sale: true },
+            { name: "Samsung S24 Ultra", price: "420,000", old: "525,000", img: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf", sale: true },
+            { name: "MacBook Pro M3 Max", price: "850,000", old: "990,000", img: "https://images.unsplash.com/photo-1517336712461-481a07dfdf24", sale: true },
+            { name: "Sony PS5 Slim", price: "165,000", old: "185,000", img: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3", sale: false },
+            { name: "AirPods Pro 2", price: "65,000", old: "75,000", img: "https://images.unsplash.com/photo-1588423770574-910ae26c8595", sale: false },
+            { name: "iPad Pro M2 12.9", price: "310,000", old: "350,000", img: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0", sale: false },
+            { name: "Sony Alpha A7 IV", price: "680,000", old: "750,000", img: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32", sale: false },
+            { name: "RTX 4090 ROG Strix", price: "620,000", old: "700,000", img: "https://images.unsplash.com/photo-1591488320449-011701bb6704", sale: true },
+            { name: "Apple Watch Ultra 2", price: "245,000", old: "280,000", img: "https://images.unsplash.com/photo-1546868871-7041f2a55e12", sale: false },
+            { name: "Dyson V15 Detect", price: "185,000", old: "210,000", img: "https://images.unsplash.com/photo-1558317374-067fb5f30001", sale: false },
+            { name: "DJI Mavic 3 Pro", price: "740,000", old: "820,000", img: "https://images.unsplash.com/photo-1507582020474-9a35b7d455d9", sale: false },
+            { name: "Logitech G Pro Mouse", price: "35,000", old: "45,000", img: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf", sale: true },
+            { name: "Keychron K2 Keyboard", price: "25,000", old: "30,000", img: "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae", sale: false },
+            { name: "Nintendo Switch OLED", price: "95,000", old: "110,000", img: "https://images.unsplash.com/photo-1578303372400-da14251ff170", sale: true },
+            { name: "GoPro Hero 12", price: "125,000", old: "145,000", img: "https://images.unsplash.com/photo-1524333892444-2103734a5043", sale: false },
+            { name: "Samsung Odyssey G9", price: "390,000", old: "450,000", img: "https://images.unsplash.com/photo-1555680202-c86f0e12f086", sale: false },
+            { name: "ASUS ROG Zephyrus", price: "550,000", old: "620,000", img: "https://images.unsplash.com/photo-1603302576837-37561b2e2302", sale: true },
+            { name: "Marshall Emberton II", price: "48,000", old: "55,000", img: "https://images.unsplash.com/photo-1545454675-3531b543be5d", sale: false },
+            { name: "Beats Studio Pro", price: "85,000", old: "105,000", img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e", sale: false },
+            { name: "Canon EOS R5", price: "950,000", old: "1,100,000", img: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32", sale: false },
+            { name: "Alienware 34 Monitor", price: "320,000", old: "380,000", img: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf", sale: true },
+            { name: "Razer BlackWidow", price: "42,000", old: "50,000", img: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf", sale: false },
+            { name: "Kindle Paperwhite", price: "38,000", old: "45,000", img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c", sale: true },
+            { name: "Microsoft Surface 9", price: "295,000", old: "330,000", img: "https://images.unsplash.com/photo-1589739900243-4b52cd9b104e", sale: false },
+            { name: "Nothing Phone (2)", price: "155,000", old: "175,000", img: "https://images.unsplash.com/photo-1616348436168-de43ad0db179", sale: true },
+            { name: "JBL Boombox 3", price: "135,000", old: "155,000", img: "https://images.unsplash.com/photo-1545454675-3531b543be5d", sale: false },
+            { name: "Steam Deck 512GB", price: "145,000", old: "165,000", img: "https://images.unsplash.com/photo-1578303372400-da14251ff170", sale: true },
+            { name: "Bose QuietComfort", price: "95,000", old: "110,000", img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e", sale: false },
+            { name: "Western Digital 4TB", price: "32,000", old: "40,000", img: "https://images.unsplash.com/photo-1531492746377-41be911943ef", sale: true },
+            { name: "SteelSeries Arctis", price: "55,000", old: "65,000", img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e", sale: false }
+        ];
 
-        function openOrder(name, price) {
-            currentProduct = name;
-            currentPrice = price;
-            document.getElementById('selectedProduct').innerText = "Ordering: " + name + " (Rs. " + price + ")";
-            document.getElementById('orderModal').style.display = "flex";
+        function renderProducts() {
+            const mainGrid = document.getElementById('main-grid');
+            const saleGrid = document.getElementById('sale-grid');
+            
+            products.forEach(p => {
+                const html = `
+                    <div class="product-card">
+                        ${p.sale ? '<div class="badge-sale">SALE</div>' : ''}
+                        <img src="${p.img}?q=80&w=600" alt="${p.name}">
+                        <h3>${p.name}</h3>
+                        <p class="price">
+                            ${p.sale ? `<span class="old-price">Rs. ${p.old}</span>` : ''}
+                            Rs. ${p.price}
+                        </p>
+                        <button class="buy-btn" onclick="openOrder('${p.name}', '${p.price}', '${p.img}')">Order Now</button>
+                    </div>`;
+                mainGrid.innerHTML += html;
+                if(p.sale) saleGrid.innerHTML += html;
+            });
         }
 
-        function closeOrder() {
-            document.getElementById('orderModal').style.display = "none";
+        function openOrder(name, price, img) {
+            document.getElementById('modalTitle').innerText = name;
+            document.getElementById('productPreview').innerHTML = `<img src="${img}" style="width:100%; height:150px; object-fit:cover; border-radius:15px;">`;
+            document.getElementById('orderModal').style.display = 'flex';
         }
 
-        document.getElementById('whatsappForm').onsubmit = function(e) {
+        function closeOrder() { document.getElementById('orderModal').style.display = 'none'; }
+
+        document.getElementById('checkoutForm').onsubmit = function(e) {
             e.preventDefault();
-            const name = document.getElementById('custName').value;
-            const phone = document.getElementById('custPhone').value;
-            const address = document.getElementById('custAddress').value;
-            
-            const message = `*New Order from Alsheikhs Store*%0A%0A*Product:* ${currentProduct}%0A*Price:* Rs. ${currentPrice}%0A*Customer:* ${name}%0A*Phone:* ${phone}%0A*Address:* ${address}`;
-            
-            window.open(`https://wa.me/923080136046?text=${message}`, '_blank');
+            document.getElementById('orderModal').style.display = 'none';
+            document.getElementById('successBox').style.display = 'flex';
         }
-    </script>
 
+        window.onload = renderProducts;
+    </script>
 </body>
 </html>
