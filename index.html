@@ -14,9 +14,9 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Flash Sale</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#flash-sale">Flash Sale</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="tel:03080136046"><i class="fas fa-phone"></i> 03080136046</a></li>
             </ul>
         </nav>
     </header>
@@ -25,117 +25,104 @@
         <div class="hero-content">
             <h1>Premium Digital Experience</h1>
             <p>From iPhone 17 to RTX 4090 - We Have Everything.</p>
-            <button class="cta-btn">View Catalog</button>
+            <a href="#products" class="buy-btn" style="text-decoration:none; display:inline-block; width:auto; padding:15px 40px;">Shop Now</a>
         </div>
     </section>
 
-    <section class="products">
-        <h2 class="section-title">Latest Digital Inventory</h2>
+    <section id="flash-sale" class="products" style="background: #fff1f2;">
+        <h2 class="section-title"><i class="fas fa-bolt" style="color:#ef4444;"></i> Flash Sale - 20% OFF</h2>
         <div class="product-grid">
-
             <div class="product-card">
-                <div class="badge">New</div>
-                <img src="https://images.unsplash.com/photo-1695048133142-1a20484d256e?w=400" alt="iPhone 17">
+                <div class="badge-sale">20% OFF</div>
+                <img src="https://images.unsplash.com/photo-1695048133142-1a20484d256e?q=80&w=600" alt="iPhone 17">
                 <h3>iPhone 17 Pro Max</h3>
-                <p class="description">1TB Titanium | A19 Bionic</p>
-                <p class="price">Rs. 500,000</p>
-                <button class="buy-btn">Add to Cart</button>
+                <p class="price"><span class="old-price">Rs. 625,000</span> Rs. 500,000</p>
+                <button class="buy-btn" onclick="openOrder('iPhone 17 Pro Max', '500,000')">Order Now</button>
             </div>
-
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1610945415295-d9baf0602071?w=400" alt="S24 Ultra">
+                <div class="badge-sale">20% OFF</div>
+                <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=600" alt="S24 Ultra">
                 <h3>Samsung S24 Ultra</h3>
-                <p class="description">Titanium Gray | Galaxy AI</p>
-                <p class="price">Rs. 420,000</p>
-                <button class="buy-btn">Add to Cart</button>
+                <p class="price"><span class="old-price">Rs. 525,000</span> Rs. 420,000</p>
+                <button class="buy-btn" onclick="openOrder('Samsung S24 Ultra', '420,000')">Order Now</button>
             </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1517336712461-481a07dfdf24?w=400" alt="MacBook">
-                <h3>MacBook Pro M3 Max</h3>
-                <p class="description">16" Display | 1TB SSD</p>
-                <p class="price">Rs. 850,000</p>
-                <button class="buy-btn">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=400" alt="PS5">
-                <h3>PlayStation 5 Slim</h3>
-                <p class="description">825GB | DualSense Controller</p>
-                <p class="price">Rs. 165,000</p>
-                <button class="buy-btn">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1588423770574-910ae26c8595?w=400" alt="AirPods">
-                <h3>AirPods Pro (2nd Gen)</h3>
-                <p class="description">USB-C | Noise Cancellation</p>
-                <p class="price">Rs. 65,000</p>
-                <button class="buy-btn">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400" alt="iPad">
-                <h3>iPad Pro M2 12.9"</h3>
-                <p class="description">Space Gray | 256GB WiFi</p>
-                <p class="price">Rs. 310,000</p>
-                <button class="buy-btn">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400" alt="Sony Camera">
-                <h3>Sony Alpha A7 IV</h3>
-                <p class="description">Full-Frame Mirrorless Camera</p>
-                <p class="price">Rs. 680,000</p>
-                <button class="buy-btn">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400" alt="Monitor">
-                <h3>Samsung Odyssey G9</h3>
-                <p class="description">49" Curved Gaming Monitor</p>
-                <p class="price">Rs. 390,000</p>
-                <button class="buy-btn">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400" alt="Apple Watch">
-                <h3>Apple Watch Ultra 2</h3>
-                <p class="description">Titanium Case | Ocean Band</p>
-                <p class="price">Rs. 245,000</p>
-                <button class="buy-btn">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400" alt="GPU">
-                <h3>NVIDIA RTX 4090 GPU</h3>
-                <p class="description">24GB GDDR6X | ROG Strix</p>
-                <p class="price">Rs. 620,000</p>
-                <button class="buy-btn">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?w=400" alt="Dyson">
-                <h3>Dyson V15 Detect</h3>
-                <p class="description">Cordless Vacuum Cleaner</p>
-                <p class="price">Rs. 185,000</p>
-                <button class="buy-btn">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1507582020474-9a35b7d455d9?w=400" alt="Drone">
-                <h3>DJI Mavic 3 Pro</h3>
-                <p class="description">Triple Camera | 4K HDR</p>
-                <p class="price">Rs. 740,000</p>
-                <button class="buy-btn">Add to Cart</button>
-            </div>
-
         </div>
     </section>
+
+    <section id="products" class="products">
+        <h2 class="section-title">All Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1517336712461-481a07dfdf24?q=80&w=600" alt="MacBook">
+                <h3>MacBook Pro M3 Max</h3>
+                <p class="price">Rs. 850,000</p>
+                <button class="buy-btn" onclick="openOrder('MacBook Pro M3 Max', '850,000')">Order Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=600" alt="PS5">
+                <h3>PlayStation 5 Slim</h3>
+                <p class="price">Rs. 165,000</p>
+                <button class="buy-btn" onclick="openOrder('PlayStation 5 Slim', '165,000')">Order Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1588423770574-910ae26c8595?q=80&w=600" alt="AirPods">
+                <h3>AirPods Pro (2nd Gen)</h3>
+                <p class="price">Rs. 65,000</p>
+                <button class="buy-btn" onclick="openOrder('AirPods Pro', '65,000')">Order Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=600" alt="iPad">
+                <h3>iPad Pro M2 12.9"</h3>
+                <p class="price">Rs. 310,000</p>
+                <button class="buy-btn" onclick="openOrder('iPad Pro M2', '310,000')">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrder()">&times;</span>
+            <h2>Complete Your Order</h2>
+            <p id="selectedProduct" style="font-weight:bold; color:#2563eb; margin-bottom:20px;"></p>
+            <form id="whatsappForm">
+                <input type="text" id="custName" placeholder="Full Name" required>
+                <input type="tel" id="custPhone" placeholder="Phone Number (WhatsApp)" required>
+                <textarea id="custAddress" placeholder="Delivery Address" required></textarea>
+                <button type="submit" class="buy-btn">Confirm Order via WhatsApp</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Alsheikhs Store - All Tech Brands Under One Roof.</p>
+        <p>&copy; 2026 Alsheikhs Store | Contact: 03080136046</p>
     </footer>
+
+    <script>
+        let currentProduct = "";
+        let currentPrice = "";
+
+        function openOrder(name, price) {
+            currentProduct = name;
+            currentPrice = price;
+            document.getElementById('selectedProduct').innerText = "Ordering: " + name + " (Rs. " + price + ")";
+            document.getElementById('orderModal').style.display = "flex";
+        }
+
+        function closeOrder() {
+            document.getElementById('orderModal').style.display = "none";
+        }
+
+        document.getElementById('whatsappForm').onsubmit = function(e) {
+            e.preventDefault();
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const address = document.getElementById('custAddress').value;
+            
+            const message = `*New Order from Alsheikhs Store*%0A%0A*Product:* ${currentProduct}%0A*Price:* Rs. ${currentPrice}%0A*Customer:* ${name}%0A*Phone:* ${phone}%0A*Address:* ${address}`;
+            
+            window.open(`https://wa.me/923080136046?text=${message}`, '_blank');
+        }
+    </script>
 
 </body>
 </html>
